@@ -10,12 +10,15 @@ var readline = require('readline-sync')
 const firstNote = parseFloat(readline.question(`Digite a primeira nota: `));
 const secondNote = parseFloat(readline.question(`Digite a segunda nota: `));
 
-const medium = firstNote + secondNote / 2;
+const medium = (firstNote + secondNote) / 2;
 
-if (medium >= 7.0) {
-    console.log(`APROVADO , Media final ${medium}`);
-} else if (medium > 5.0 && medium <= 6.9) {
-    console.log(`RECUPERAÇÃO, Media final ${medium}`);
+if (medium <= 4.9) {
+    console.log(`sua media é: ${medium}`);
+    console.log("REPROVADO");
+}else if ( medium > 5.0  && medium <= 6.9){
+    console.log(`sua media é: ${medium}`);
+    console.log("RECUPERAÇÃO");
 }else{
-    console.log(`REPROVADO, Media final ${medium}`);
+    console.log(`sua media é: ${medium}`);
+    console.log("APROVADO");
 }
