@@ -1,11 +1,14 @@
-// Crie um programa que mostre na tela a seguinte contagem, usando a estrutura
-// “faça enquanto”
-// 0 3 6 9 12 15 18 21 24 27 30 Acabou!
+// Crie um programa que tenha um procedimento Gerador() que, quando chamado,
+// mostre a mensagem "Olá, Mundo!" com algum componente visual (linhas)
+// Ex: Ao chamar Gerador() aparece:
+// +-------=======------+
+// Olá, Mundo!
+// +-------=======------+
 
-let count : number = 0;
+function Gerador() {
+    console.log("+-------=======------+");
+    console.log("Olá, Mundo!");
+    console.log("+-------=======------+");
+}
 
-do {
-    process.stdout.write(count + " ");
-    count+=3;
-} while (count <= 30);
-console.log(" Acabou!");
+Gerador();

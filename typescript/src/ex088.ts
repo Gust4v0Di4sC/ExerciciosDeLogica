@@ -1,11 +1,19 @@
-// Crie um programa que mostre na tela a seguinte contagem, usando a estrutura
-// “faça enquanto”
-// 0 3 6 9 12 15 18 21 24 27 30 Acabou!
+// Crie um programa que melhore o procedimento Gerador() da questão anterior
+// para que mostre uma mensagem vário
+// Ex: Ao chamar Gerador("Aprendendo Portugol", 4) aparece:
+// +-------=======------+
+// Aprendendo Portugol
+// Aprendendo Portugol
+// Aprendendo Portugol
+// Aprendendo Portugol
+// +-------=======------+
 
-let count : number = 0;
+function GeradorPlusPlus(message : string, times: number) {
+    console.log("+-------=======------+");
+    for (let i = 0; i < times; i++) {
+        console.log(`${message}`);
+    }
+    console.log("+-------=======------+");
+}
 
-do {
-    process.stdout.write(count + " ");
-    count+=3;
-} while (count <= 30);
-console.log(" Acabou!");
+GeradorPlusPlus("Aprendendo TypeScript",4);

@@ -1,11 +1,22 @@
-// Crie um programa que mostre na tela a seguinte contagem, usando a estrutura
-// “faça enquanto”
-// 0 3 6 9 12 15 18 21 24 27 30 Acabou!
+// Desenvolva um algoritmo que leia dois valores pelo teclado e passe esses
+// valores para um procedimento Somador() que vai calcular e mostrar a soma entre
+// eles.
 
-let count : number = 0;
+var readline = require('readline-sync');
 
-do {
-    process.stdout.write(count + " ");
-    count+=3;
-} while (count <= 30);
-console.log(" Acabou!");
+
+
+function Somador(valueOne: number, valueTwo: number) {
+    return valueOne + valueTwo;
+}
+
+function Main(){
+    let valueOne:number = parseInt(readline.question("Digite um valor: "));
+    let valueTwo:number = parseInt(readline.question("Digite outro valor: "));
+
+    console.log(Somador(valueOne,valueTwo));
+}
+
+Main();
+
+

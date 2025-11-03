@@ -1,11 +1,32 @@
-// Crie um programa que mostre na tela a seguinte contagem, usando a estrutura
-// “faça enquanto”
-// 0 3 6 9 12 15 18 21 24 27 30 Acabou!
+// Crie um programa que melhore o procedimento Gerador() da questão anterior
+// para que o programador possa escolher uma entre três bordas:
+// +-------=======------+ Borda 1
+// ~~~~~~~~:::::::~~~~~~~ Borda 2
+// <<<<<<<<------->>>>>>> Borda 3
 
-let count : number = 0;
+function GeradorPlusUltra(message : string, times: number, border: number) {
+    let borderTemp : string = "";
+    switch (border) {
+        case 1:
+            borderTemp = "+-------=======------+"
+            break;
+        case 2:
+            borderTemp = "~~~~~~~~:::::::~~~~~~~ "
+            break;
+        case 3:
+            borderTemp = "<<<<<<<<------->>>>>>> "
+            break;
 
-do {
-    process.stdout.write(count + " ");
-    count+=3;
-} while (count <= 30);
-console.log(" Acabou!");
+        default:
+            console.log("opção invalida");
+            break;
+    }
+
+    console.log(borderTemp);
+    for (let i = 0; i < times; i++) {
+        console.log(`${message}`);
+    }
+    console.log(borderTemp);
+}
+
+GeradorPlusUltra("Aprendendo TypeScript",4,2);

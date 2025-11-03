@@ -1,11 +1,24 @@
-// Crie um programa que mostre na tela a seguinte contagem, usando a estrutura
-// “faça enquanto”
-// 0 3 6 9 12 15 18 21 24 27 30 Acabou!
+// Desenvolva um algoritmo que leia dois valores pelo teclado e passe esses
+// valores para um procedimento Maior() que vai verificar qual deles é o maior e
+// mostrá-lo na tela. Caso os dois valores sejam iguais, mostrar uma mensagem
+// informando essa característica.
 
-let count : number = 0;
+var readline = require('readline-sync');
 
-do {
-    process.stdout.write(count + " ");
-    count+=3;
-} while (count <= 30);
-console.log(" Acabou!");
+
+function Maior(valueOne: number, valueTwo: number) {
+    if (valueOne > valueTwo) {
+        return valueOne;
+    }else{
+        return valueTwo;
+    }
+}
+
+function Mainn(){
+    let valueOne:number = parseInt(readline.question("Digite um valor: "));
+    let valueTwo:number = parseInt(readline.question("Digite outro valor: "));
+
+    console.log(Maior(valueOne,valueTwo));
+}
+
+Mainn();

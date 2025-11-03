@@ -1,11 +1,26 @@
-// Crie um programa que mostre na tela a seguinte contagem, usando a estrutura
-// “faça enquanto”
-// 0 3 6 9 12 15 18 21 24 27 30 Acabou!
+//  [DESAFIO] Crie uma lógica que preencha um vetor de 20 posições com números
+// aleatórios (entre 0 e 99) gerados pelo computador. Logo em seguida, mostre os
+// números gerados e depois coloque o vetor em ordem crescente, mostrando no final
+// os valores ordenados.
 
-let count : number = 0;
+var readline = require('readline-sync');
 
-do {
-    process.stdout.write(count + " ");
-    count+=3;
-} while (count <= 30);
-console.log(" Acabou!");
+let arrRandNum : number[] = new Array(20);
+let arrSortedNum : number[] = new Array(20);
+
+
+
+
+for (let i = 0; i < arrRandNum.length; i++) {
+     let randNum : number = Math.floor(Math.random() * (100 - 1) + 1);
+     arrRandNum[i] = randNum;
+}
+
+arrSortedNum = arrRandNum.slice(0).sort((a,b)=> a-b);
+
+console.log(`Vetor gerado: [${arrRandNum}]`);
+console.log(`Vetor gerado ordenado: [${arrSortedNum}]`);
+
+
+
+
