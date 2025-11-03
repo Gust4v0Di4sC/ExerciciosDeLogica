@@ -1,11 +1,16 @@
-// Crie um programa que mostre na tela a seguinte contagem, usando a estrutura
-// “faça enquanto”
-// 0 3 6 9 12 15 18 21 24 27 30 Acabou!
+// Crie um programa que preencha automaticamente (usando lógica, não apenas
+// atribuindo diretamente) um vetor numérico com 15 posições com os primeiros
+// elementos da sequência de Fibonacci:
+// 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
+// 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 
-let count : number = 0;
+let arrFib : number[] = new Array(16);
 
-do {
-    process.stdout.write(count + " ");
-    count+=3;
-} while (count <= 30);
-console.log(" Acabou!");
+arrFib[0] = 1;
+arrFib[1] = 1;
+
+for (let i : number = 2; i < arrFib.length; i++) {
+    arrFib[i] = arrFib[i - 1] + arrFib[i - 2];
+}
+
+console.log(`[${arrFib}]`);

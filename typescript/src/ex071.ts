@@ -1,11 +1,13 @@
-// Crie um programa que mostre na tela a seguinte contagem, usando a estrutura
-// “faça enquanto”
-// 0 3 6 9 12 15 18 21 24 27 30 Acabou!
+// Faça um programa que preencha automaticamente um vetor numérico com 8
+// posições, conforme abaixo:
+// 999 999 999 999 999 999 999 999
+// 0 1 2 3 4 5 6 7
 
-let count : number = 0;
 
-do {
-    process.stdout.write(count + " ");
-    count+=3;
-} while (count <= 30);
-console.log(" Acabou!");
+let vetInput : number[] = new Array(8);
+
+for (let i = 0; i < vetInput.length; i++) {
+    vetInput[i] = 999;
+}
+
+console.log(`[${vetInput}]`);

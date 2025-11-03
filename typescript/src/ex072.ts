@@ -1,11 +1,14 @@
-// Crie um programa que mostre na tela a seguinte contagem, usando a estrutura
-// “faça enquanto”
-// 0 3 6 9 12 15 18 21 24 27 30 Acabou!
+// Crie um programa que preencha automaticamente (usando lógica, não apenas
+// atribuindo diretamente) um vetor numérico com 10 posições, conforme abaixo:
+// 5 10 15 20 25 30 35 40 45 50
+// 0 1 2 3 4 5 6 7 8 9
 
-let count : number = 0;
+let arrInput : number[] = new Array(10);
 
-do {
-    process.stdout.write(count + " ");
-    count+=3;
-} while (count <= 30);
-console.log(" Acabou!");
+for (let i = 0; i < arrInput.length; i++) {
+    arrInput[i] =  5 *(i+1); 
+}
+
+console.log(`[${arrInput}]`);
+
+

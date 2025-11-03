@@ -1,11 +1,14 @@
-// Crie um programa que mostre na tela a seguinte contagem, usando a estrutura
-// “faça enquanto”
-// 0 3 6 9 12 15 18 21 24 27 30 Acabou!
+// Crie um programa que preencha automaticamente um vetor numérico com 7
+// números gerados aleatoriamente pelo computador e depois mostre os valores
+// gerados na tela.
 
-let count : number = 0;
+let arrRand : number[] = new Array(8);
 
-do {
-    process.stdout.write(count + " ");
-    count+=3;
-} while (count <= 30);
-console.log(" Acabou!");
+
+
+for (let i = 0; i < arrRand.length; i++) {
+    let randNum : number = Math.floor(Math.random() * (10 - 1) + 1)
+    arrRand[i] = randNum;
+}
+
+console.log(`[${arrRand}]`);

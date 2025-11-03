@@ -1,11 +1,24 @@
-// Crie um programa que mostre na tela a seguinte contagem, usando a estrutura
-// “faça enquanto”
-// 0 3 6 9 12 15 18 21 24 27 30 Acabou!
+// Desenvolva um programa que leia 10 números inteiros e guarde-os em um vetor.
+// No final, mostre quais são os números pares que foram digitados e em que
+// posições eles estão armazenados.
 
-let count : number = 0;
+var readline = require('readline-sync');
 
-do {
-    process.stdout.write(count + " ");
-    count+=3;
-} while (count <= 30);
-console.log(" Acabou!");
+let lengArr : number = 0;
+let arrNumsI : number[] = new Array(10);
+let arrNumOdd : number[] = new Array(lengArr);
+let arrNumPos : number[] = new Array(lengArr);
+
+
+for (let i = 0; i < arrNumsI.length; i++) {
+    arrNumsI[i] = parseInt(readline.question("Digite um numero inteiro: "));
+
+    if (arrNumsI[i] % 2 === 0) {
+        arrNumOdd.push(arrNumsI[i]);
+        arrNumPos.push(i);
+        lengArr+=1;
+    }
+}
+console.log(`Vetor : [${arrNumsI}]`);
+console.log(`Numeros Pares : [${arrNumOdd}]`);
+console.log(`Posicoes : [${arrNumPos}]`);

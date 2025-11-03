@@ -1,11 +1,21 @@
-// Crie um programa que mostre na tela a seguinte contagem, usando a estrutura
-// “faça enquanto”
-// 0 3 6 9 12 15 18 21 24 27 30 Acabou!
+// Escreva um programa que leia 15 números e guarde-os em um vetor. No final,
+// mostre o vetor inteiro na tela e em seguida mostre em que posições foram
+// digitados valores que são múltiplos de 10.
 
-let count : number = 0;
+var readline = require('readline-sync');
 
-do {
-    process.stdout.write(count + " ");
-    count+=3;
-} while (count <= 30);
-console.log(" Acabou!");
+let arrNums : number[] = new Array(15);
+let multiple : number = 0;
+let arrPosTen : number[] = new Array(multiple);
+
+for (let i = 0; i < arrNums.length; i++) {
+    arrNums[i] = parseInt(readline.question("Digite um numero: "));
+
+    if (arrNums[i] % 10 === 0) {
+        arrPosTen.push(i);
+        multiple += 1;
+    }
+}
+
+console.log(`Vetor: [${arrNums}]`);
+console.log(`Posicoes com os multiplos de 10: [${arrPosTen}]`);
